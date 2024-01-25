@@ -1,9 +1,11 @@
 import numpy as np
 
+
 def main():
-    for i in range(1001):
-        x = i / 500.0 * np.pi
-        y = np.sin(x)
-        print(f"sin(x) = {y} x = {x} i = {i}")
+    x = np.linspace(0,2*np.pi,1000)
+    y = np.sin(x)
+    for one,two in zip(x,y):
+        print(f"x = {one}, sin(x) = {two}")
+    
 if __name__=="__main__":
     main()
